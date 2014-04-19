@@ -127,7 +127,7 @@ public class BundleInjectorTest {
     public void testInjectInteger() {
         Bundle bundle = new Bundle();
         int expected = 12345;
-        bundle.putDouble("injectedVar", expected);
+        bundle.putInt("injectedVar", expected);
         IntegerMember test = new IntegerMember();
         test.inject(bundle);
         assertEquals(expected, test.getInjectedVar());
