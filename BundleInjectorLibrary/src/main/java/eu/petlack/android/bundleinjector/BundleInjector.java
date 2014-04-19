@@ -26,10 +26,10 @@ public class BundleInjector {
                         if (f.getType().equals(String.class)) {
                             f.set(o, Utils.getString(bundle, f.getName(), ""));
                         }
-                        else if (f.getType().equals(Integer.class)) {
+                        else if (f.getType().equals(Integer.TYPE)) {
                             f.set(o, bundle.getInt(f.getName(), 0));
                         }
-                        else if (f.getType().equals(Double.class)) {
+                        else if (f.getType().equals(Double.TYPE)) {
                             f.set(o, bundle.getDouble(f.getName(), 0));
                         }
                         else {
