@@ -58,35 +58,13 @@ public class BundleInjectorTest {
     class PrimitiveMember extends Member {
 
         @InjectBundle
-        private double injectedVarDouble = 0d;
+        public double injectedVarDouble = 0d;
         @InjectBundle
-        private int injectedVarInt = 0;
+        public int injectedVarInt = 0;
         @InjectBundle
-        private boolean injectedVarBoolean = false;
-
-        public double getInjectedVarDouble() {
-            return injectedVarDouble;
-        }
-
-        public void setInjectedVarDouble(double injectedVarDouble) {
-            this.injectedVarDouble = injectedVarDouble;
-        }
-
-        public int getInjectedVarInt() {
-            return injectedVarInt;
-        }
-
-        public void setInjectedVarInt(int injectedVarInt) {
-            this.injectedVarInt = injectedVarInt;
-        }
-
-        public boolean getInjectedVarBoolean() {
-            return injectedVarBoolean;
-        }
-
-        public void setInjectedVarBoolean(boolean injectedVarBoolean) {
-            this.injectedVarBoolean = injectedVarBoolean;
-        }
+        public boolean injectedVarBoolean = false;
+        @InjectBundle
+        public boolean[] injectedVarBooleanArray = { false };
 
     }
 
@@ -127,7 +105,7 @@ public class BundleInjectorTest {
         bundle.putDouble("injectedVarDouble", expected);
         PrimitiveMember test = new PrimitiveMember();
         test.inject(bundle);
-        assertEquals(expected, test.getInjectedVarDouble());
+        assertEquals(expected, test.injectedVarDouble);
     }
 
     @Test
@@ -137,7 +115,7 @@ public class BundleInjectorTest {
         bundle.putInt("injectedVarInt", expected);
         PrimitiveMember test = new PrimitiveMember();
         test.inject(bundle);
-        assertEquals(expected, test.getInjectedVarInt());
+        assertEquals(expected, test.injectedVarInt);
     }
 
     @Test
@@ -147,11 +125,21 @@ public class BundleInjectorTest {
         bundle.putBoolean("injectedVarBoolean", expected);
         PrimitiveMember test = new PrimitiveMember();
         test.inject(bundle);
-        assertEquals(expected, test.getInjectedVarBoolean());
+        assertEquals(expected, test.injectedVarBoolean);
         expected = false;
         bundle.putBoolean("injectedVarBoolean", expected);
         test.inject(bundle);
-        assertEquals(expected, test.getInjectedVarBoolean());
+        assertEquals(expected, test.injectedVarBoolean);
+    }
+
+    @Test
+    public void testInjectBooleanArray() {
+        Bundle bundle = new Bundle();
+        boolean[] expected = { true, false };
+        bundle.putBooleanArray("injectedVarBooleanArray", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarBooleanArray);
     }
 
 }
