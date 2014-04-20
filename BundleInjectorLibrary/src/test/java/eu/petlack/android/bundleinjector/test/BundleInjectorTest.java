@@ -2,6 +2,7 @@ package eu.petlack.android.bundleinjector.test;
 
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.util.SparseArray;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -394,6 +395,22 @@ public class BundleInjectorTest {
         PrimitiveMember test = new PrimitiveMember();
         test.inject(bundle);
         assertEquals(expected, test.injectedVarShortArray);
+    }
+
+    @Test
+    public void testInjectSparseParcelableArray() {
+        Bundle bundle = new Bundle();
+        Parcelable expected1 = new Bundle();
+        ((Bundle) expected1).putString("test key 1", "test value 1");
+        Parcelable expected2 = new Bundle();
+        ((Bundle) expected2).putString("test key 2", "test value 2");
+        SparseArray<Parcelable> expected = new SparseArray<Parcelable>();
+        expected.append(1, expected1);
+        expected.append(2, expected2);
+        bundle.putSparseParcelableArray("injectedVar", expected);
+        PublicMember<SparseArray<Parcelable>> test = new PublicMember<SparseArray<Parcelable>>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
     }
 
 }
