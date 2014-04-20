@@ -68,8 +68,8 @@
       <file leaf-file-name="BundleInjectorTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7037037" vertical-offset="7002" max-vertical-offset="7596">
-              <caret line="408" column="38" selection-start-line="408" selection-start-column="38" selection-end-line="408" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.962963" vertical-offset="7164" max-vertical-offset="7992">
+              <caret line="424" column="0" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#630#631#0" expanded="true" />
@@ -98,6 +98,10 @@
                 <element signature="e#12062#12085#0" expanded="true" />
                 <element signature="e#12421#12435#0" expanded="true" />
                 <element signature="e#13571#13583#0" expanded="true" />
+                <element signature="e#13800#13825#0" expanded="true" />
+                <element signature="e#14187#14197#0" expanded="true" />
+                <element signature="e#14431#14439#0" expanded="true" />
+                <element signature="e#14620#14639#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1258,8 +1262,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7037037" vertical-offset="7002" max-vertical-offset="7596">
-          <caret line="408" column="38" selection-start-line="408" selection-start-column="38" selection-end-line="408" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.962963" vertical-offset="7164" max-vertical-offset="7992">
+          <caret line="424" column="0" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#630#631#0" expanded="true" />
@@ -1288,6 +1292,10 @@
             <element signature="e#12062#12085#0" expanded="true" />
             <element signature="e#12421#12435#0" expanded="true" />
             <element signature="e#13571#13583#0" expanded="true" />
+            <element signature="e#13800#13825#0" expanded="true" />
+            <element signature="e#14187#14197#0" expanded="true" />
+            <element signature="e#14431#14439#0" expanded="true" />
+            <element signature="e#14620#14639#0" expanded="true" />
           </folding>
         </state>
       </provider>

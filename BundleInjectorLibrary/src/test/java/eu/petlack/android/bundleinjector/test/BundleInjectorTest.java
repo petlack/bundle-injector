@@ -413,4 +413,26 @@ public class BundleInjectorTest {
         assertEquals(expected, test.injectedVar);
     }
 
+    @Test
+    public void testInjectStringArray() {
+        Bundle bundle = new Bundle();
+        String[] expected = { "expected value 1", "expected value 2" };
+        bundle.putStringArray("injectedVar", expected);
+        PublicMember<String[]> test = new PublicMember<String[]>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
+    }
+
+    @Test
+    public void testInjectStringArrayList() {
+        Bundle bundle = new Bundle();
+        ArrayList<String> expected = new ArrayList<String>();
+        expected.add("a");
+        expected.add("b");
+        bundle.putStringArrayList("injectedVar", expected);
+        PublicMember<ArrayList<String>> test = new PublicMember<ArrayList<String>>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
+    }
+
 }
