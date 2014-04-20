@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import eu.petlack.android.bundleinjector.BundleInjector;
@@ -357,6 +358,16 @@ public class BundleInjectorTest {
         expected.add(expected2);
         bundle.putParcelableArrayList("injectedVar", expected);
         PublicMember<ArrayList<Parcelable>> test = new PublicMember<ArrayList<Parcelable>>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
+    }
+
+    @Test
+    public void testInjectSerializable() {
+        Bundle bundle = new Bundle();
+        Serializable expected = "abcd";
+        bundle.putSerializable("injectedVar", expected);
+        PublicMember<Serializable> test = new PublicMember<Serializable>();
         test.inject(bundle);
         assertEquals(expected, test.injectedVar);
     }
