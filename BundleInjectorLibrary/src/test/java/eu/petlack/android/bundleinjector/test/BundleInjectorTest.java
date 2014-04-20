@@ -23,76 +23,69 @@ public class BundleInjectorTest {
         }
     }
 
-    class PublicStringMember extends Member {
+    class PublicMember<T> extends Member {
         @InjectBundle
-        public String injectedVar;
+        public T injectedVar;
     }
 
-    class PrivateStringMember extends Member {
+    class PrivateMember<T> extends Member {
         @InjectBundle
-        private String injectedVar;
+        private T injectedVar;
 
-        public void setInjectedVar(String injectedVar) {
+        public void setInjectedVar(T injectedVar) {
             this.injectedVar = injectedVar;
         }
 
-        public String getInjectedVar() {
+        public T getInjectedVar() {
             return this.injectedVar;
         }
 
     }
 
-    class ProtectedStringMember extends Member {
+    class ProtectedMember<T> extends Member {
         @InjectBundle
-        protected String injectedVar;
+        protected T injectedVar;
 
-        public void setInjectedVar(String injectedVar) {
+        public void setInjectedVar(T injectedVar) {
             this.injectedVar = injectedVar;
         }
 
-        public String getInjectedVar() {
+        public T getInjectedVar() {
             return this.injectedVar;
         }
     }
 
-    class DoubleMember extends Member {
+    class PrimitiveMember extends Member {
+
         @InjectBundle
-        private double injectedVar = 0d;
-
-        public void setInjectedVar(double injectedVar) {
-            this.injectedVar = injectedVar;
-        }
-
-        public double getInjectedVar() {
-            return this.injectedVar;
-        }
-
-    }
-
-    class IntegerMember extends Member {
+        private double injectedVarDouble = 0d;
         @InjectBundle
-        private int injectedVar = 0;
-
-        public void setInjectedVar(int injectedVar) {
-            this.injectedVar = injectedVar;
-        }
-
-        public int getInjectedVar() {
-            return this.injectedVar;
-        }
-
-    }
-
-    class BooleanMember extends Member {
+        private int injectedVarInt = 0;
         @InjectBundle
-        private boolean injectedVar = false;
+        private boolean injectedVarBoolean = false;
 
-        public void setInjectedVar(boolean injectedVar) {
-            this.injectedVar = injectedVar;
+        public double getInjectedVarDouble() {
+            return injectedVarDouble;
         }
 
-        public boolean getInjectedVar() {
-            return this.injectedVar;
+        public void setInjectedVarDouble(double injectedVarDouble) {
+            this.injectedVarDouble = injectedVarDouble;
+        }
+
+        public int getInjectedVarInt() {
+            return injectedVarInt;
+        }
+
+        public void setInjectedVarInt(int injectedVarInt) {
+            this.injectedVarInt = injectedVarInt;
+        }
+
+        public boolean getInjectedVarBoolean() {
+            return injectedVarBoolean;
+        }
+
+        public void setInjectedVarBoolean(boolean injectedVarBoolean) {
+            this.injectedVarBoolean = injectedVarBoolean;
         }
 
     }
@@ -102,7 +95,7 @@ public class BundleInjectorTest {
         Bundle bundle = new Bundle();
         String expected = "expected value";
         bundle.putString("injectedVar", expected);
-        PublicStringMember test = new PublicStringMember();
+        PublicMember<String> test = new PublicMember<String>();
         test.inject(bundle);
         assertEquals(expected, test.injectedVar);
     }
@@ -112,7 +105,7 @@ public class BundleInjectorTest {
         Bundle bundle = new Bundle();
         String expected = "expected value";
         bundle.putString("injectedVar", expected);
-        PrivateStringMember test = new PrivateStringMember();
+        PrivateMember<String> test = new PrivateMember<String>();
         test.inject(bundle);
         assertEquals(expected, test.getInjectedVar());
     }
@@ -122,7 +115,7 @@ public class BundleInjectorTest {
         Bundle bundle = new Bundle();
         String expected = "expected value";
         bundle.putString("injectedVar", expected);
-        ProtectedStringMember test = new ProtectedStringMember();
+        ProtectedMember<String> test = new ProtectedMember<String>();
         test.inject(bundle);
         assertEquals(expected, test.getInjectedVar());
     }
@@ -131,34 +124,34 @@ public class BundleInjectorTest {
     public void testInjectDouble() {
         Bundle bundle = new Bundle();
         double expected = 2.5f;
-        bundle.putDouble("injectedVar", expected);
-        DoubleMember test = new DoubleMember();
+        bundle.putDouble("injectedVarDouble", expected);
+        PrimitiveMember test = new PrimitiveMember();
         test.inject(bundle);
-        assertEquals(expected, test.getInjectedVar());
+        assertEquals(expected, test.getInjectedVarDouble());
     }
 
     @Test
     public void testInjectInteger() {
         Bundle bundle = new Bundle();
         int expected = 12345;
-        bundle.putInt("injectedVar", expected);
-        IntegerMember test = new IntegerMember();
+        bundle.putInt("injectedVarInt", expected);
+        PrimitiveMember test = new PrimitiveMember();
         test.inject(bundle);
-        assertEquals(expected, test.getInjectedVar());
+        assertEquals(expected, test.getInjectedVarInt());
     }
 
     @Test
     public void testInjectBoolean() {
         Bundle bundle = new Bundle();
         boolean expected = true;
-        bundle.putBoolean("injectedVar", expected);
-        BooleanMember test = new BooleanMember();
+        bundle.putBoolean("injectedVarBoolean", expected);
+        PrimitiveMember test = new PrimitiveMember();
         test.inject(bundle);
-        assertEquals(expected, test.getInjectedVar());
+        assertEquals(expected, test.getInjectedVarBoolean());
         expected = false;
-        bundle.putBoolean("injectedVar", expected);
+        bundle.putBoolean("injectedVarBoolean", expected);
         test.inject(bundle);
-        assertEquals(expected, test.getInjectedVar());
+        assertEquals(expected, test.getInjectedVarBoolean());
     }
 
 }
