@@ -83,6 +83,10 @@ public class BundleInjectorTest {
         public int injectedVarInt = 0;
         @InjectBundle
         public int[] injectedVarIntArray = { 0 };
+        @InjectBundle
+        public long injectedVarLong = 0;
+        @InjectBundle
+        public long[] injectedVarLongArray = { 0 };
 
     }
 
@@ -293,6 +297,26 @@ public class BundleInjectorTest {
         PublicMember<ArrayList<Integer>> test = new PublicMember<ArrayList<Integer>>();
         test.inject(bundle);
         assertEquals(expected, test.injectedVar);
+    }
+
+    @Test
+    public void testInjectLong() {
+        Bundle bundle = new Bundle();
+        long expected = 12345;
+        bundle.putLong("injectedVarLong", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarLong);
+    }
+
+    @Test
+    public void testInjectLongArray() {
+        Bundle bundle = new Bundle();
+        long[] expected = { 31, 41 };
+        bundle.putLongArray("injectedVarLongArray", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarLongArray);
     }
 
 }
