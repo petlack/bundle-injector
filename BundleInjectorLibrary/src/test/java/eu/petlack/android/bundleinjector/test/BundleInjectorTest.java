@@ -60,8 +60,6 @@ public class BundleInjectorTest {
     class PrimitiveMember extends Member {
 
         @InjectBundle
-        public double injectedVarDouble = 0d;
-        @InjectBundle
         public int injectedVarInt = 0;
         @InjectBundle
         public boolean injectedVarBoolean = false;
@@ -75,6 +73,14 @@ public class BundleInjectorTest {
         public char injectedVarChar = 'a';
         @InjectBundle
         public char[] injectedVarCharArray = { 'a' };
+        @InjectBundle
+        public double injectedVarDouble = 0d;
+        @InjectBundle
+        public double[] injectedVarDoubleArray = { 0d };
+        @InjectBundle
+        public float injectedVarFloat = 0f;
+        @InjectBundle
+        public float[] injectedVarFloatArray = { 0f };
 
     }
 
@@ -106,16 +112,6 @@ public class BundleInjectorTest {
         ProtectedMember<String> test = new ProtectedMember<String>();
         test.inject(bundle);
         assertEquals(expected, test.getInjectedVar());
-    }
-
-    @Test
-    public void testInjectDouble() {
-        Bundle bundle = new Bundle();
-        double expected = 2.5f;
-        bundle.putDouble("injectedVarDouble", expected);
-        PrimitiveMember test = new PrimitiveMember();
-        test.inject(bundle);
-        assertEquals(expected, test.injectedVarDouble);
     }
 
     @Test
@@ -233,6 +229,46 @@ public class BundleInjectorTest {
         PublicMember<ArrayList<CharSequence>> test = new PublicMember<ArrayList<CharSequence>>();
         test.inject(bundle);
         assertEquals(expected, test.injectedVar);
+    }
+
+    @Test
+    public void testInjectDouble() {
+        Bundle bundle = new Bundle();
+        double expected = 2.5f;
+        bundle.putDouble("injectedVarDouble", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarDouble);
+    }
+
+    @Test
+    public void testInjectDoubleArray() {
+        Bundle bundle = new Bundle();
+        double[] expected = { 2.5d, 3.14d };
+        bundle.putDoubleArray("injectedVarDoubleArray", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarDoubleArray);
+    }
+
+    @Test
+    public void testInjectFloat() {
+        Bundle bundle = new Bundle();
+        float expected = 2.5f;
+        bundle.putFloat("injectedVarFloat", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarFloat);
+    }
+
+    @Test
+    public void testInjectFloatArray() {
+        Bundle bundle = new Bundle();
+        float[] expected = { 2.5f, 3.14f };
+        bundle.putFloatArray("injectedVarFloatArray", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarFloatArray);
     }
 
 }
