@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2fdbe359-944a-4fdb-8d32-a2b42477e84a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java" afterPath="$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BundleInjector.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,24 +69,27 @@
       <file leaf-file-name="BundleInjectorTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6666667" vertical-offset="3294" max-vertical-offset="3780">
-              <caret line="201" column="5" selection-start-line="201" selection-start-column="5" selection-end-line="201" selection-end-column="5" />
+            <state vertical-scroll-proportion="1.0" vertical-offset="3690" max-vertical-offset="4392">
+              <caret line="232" column="93" selection-start-line="232" selection-start-column="93" selection-end-line="232" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#509#510#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#827#828#0" expanded="true" />
-                <element signature="e#881#882#0" expanded="true" />
-                <element signature="e#918#919#0" expanded="true" />
-                <element signature="e#965#966#0" expanded="true" />
-                <element signature="e#1127#1128#0" expanded="true" />
-                <element signature="e#1181#1182#0" expanded="true" />
-                <element signature="e#1218#1219#0" expanded="true" />
-                <element signature="e#1265#1266#0" expanded="true" />
-                <element signature="e#2138#2146#0" expanded="true" />
-                <element signature="e#2487#2495#0" expanded="true" />
-                <element signature="e#2847#2855#0" expanded="true" />
-                <element signature="e#4716#4724#0" expanded="true" />
+                <element signature="e#538#539#0" expanded="true" />
+                <element signature="e#597#598#0" expanded="true" />
+                <element signature="e#856#857#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#1156#1157#0" expanded="true" />
+                <element signature="e#1210#1211#0" expanded="true" />
+                <element signature="e#1247#1248#0" expanded="true" />
+                <element signature="e#1294#1295#0" expanded="true" />
+                <element signature="e#2167#2175#0" expanded="true" />
+                <element signature="e#2516#2524#0" expanded="true" />
+                <element signature="e#2876#2884#0" expanded="true" />
+                <element signature="e#4745#4753#0" expanded="true" />
+                <element signature="e#6386#6400#0" expanded="true" />
+                <element signature="e#6762#6778#0" expanded="true" />
+                <element signature="e#7024#7038#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1121,7 +1125,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-4" width="1233" height="1029" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1246,24 +1250,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667" vertical-offset="3294" max-vertical-offset="3780">
-          <caret line="201" column="5" selection-start-line="201" selection-start-column="5" selection-end-line="201" selection-end-column="5" />
+        <state vertical-scroll-proportion="1.0" vertical-offset="3690" max-vertical-offset="4392">
+          <caret line="232" column="93" selection-start-line="232" selection-start-column="93" selection-end-line="232" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
-            <element signature="e#1218#1219#0" expanded="true" />
-            <element signature="e#1265#1266#0" expanded="true" />
-            <element signature="e#2138#2146#0" expanded="true" />
-            <element signature="e#2487#2495#0" expanded="true" />
-            <element signature="e#2847#2855#0" expanded="true" />
-            <element signature="e#4716#4724#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1156#1157#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+            <element signature="e#2167#2175#0" expanded="true" />
+            <element signature="e#2516#2524#0" expanded="true" />
+            <element signature="e#2876#2884#0" expanded="true" />
+            <element signature="e#4745#4753#0" expanded="true" />
+            <element signature="e#6386#6400#0" expanded="true" />
+            <element signature="e#6762#6778#0" expanded="true" />
+            <element signature="e#7024#7038#0" expanded="true" />
           </folding>
         </state>
       </provider>

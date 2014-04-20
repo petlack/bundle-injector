@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 
+import java.util.ArrayList;
+
 import eu.petlack.android.bundleinjector.BundleInjector;
 import eu.petlack.android.bundleinjector.InjectBundle;
 
@@ -199,6 +201,38 @@ public class BundleInjectorTest {
         PrimitiveMember test = new PrimitiveMember();
         test.inject(bundle);
         assertEquals(expected, test.injectedVarCharArray);
+    }
+
+    @Test
+    public void testInjectCharSequence() {
+        Bundle bundle = new Bundle();
+        CharSequence expected = "abcd";
+        bundle.putCharSequence("injectedVar", expected);
+        PublicMember<CharSequence> test = new PublicMember<CharSequence>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
+    }
+
+    @Test
+    public void testInjectCharSequenceArray() {
+        Bundle bundle = new Bundle();
+        CharSequence[] expected = { "abcd", "efgh" };
+        bundle.putCharSequenceArray("injectedVar", expected);
+        PublicMember<CharSequence[]> test = new PublicMember<CharSequence[]>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
+    }
+
+    @Test
+    public void testInjectCharSequenceArrayList() {
+        Bundle bundle = new Bundle();
+        ArrayList<CharSequence> expected = new ArrayList<CharSequence>();
+        expected.add("abcd");
+        expected.add("efgh");
+        bundle.putCharSequenceArrayList("injectedVar", expected);
+        PublicMember<ArrayList<CharSequence>> test = new PublicMember<ArrayList<CharSequence>>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
     }
 
 }
