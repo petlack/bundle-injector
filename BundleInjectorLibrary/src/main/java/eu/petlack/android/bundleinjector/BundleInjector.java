@@ -23,18 +23,7 @@ public class BundleInjector {
                     f.setAccessible(true);
                     if (f.isAccessible()) {
                         Log.d(TAG, String.format("Injecting field %s.%s (%s)", o.getClass().getCanonicalName(), f.getName(), f.getType()));
-                        if (f.getType().equals(String.class)) {
-                            f.set(o, Utils.getString(bundle, f.getName(), ""));
-                        }
-                        else if (f.getType().equals(Integer.TYPE)) {
-                            f.set(o, bundle.getInt(f.getName(), 0));
-                        }
-                        else if (f.getType().equals(Double.TYPE)) {
-                            f.set(o, bundle.getDouble(f.getName(), 0));
-                        }
-                        else {
-                            Log.w(TAG, String.format("Unknown type of field %s.%s (%s)", o.getClass().getCanonicalName(), f.getName(), f.getType()));
-                        }
+                        f.set(o, bundle.get(f.getName()));
                     }
                     else {
                         Log.w(TAG, String.format("Field %s.%s (%s) is not accessible", o.getClass().getCanonicalName(), f.getName(), f.getType()));
