@@ -83,6 +83,20 @@ public class BundleInjectorTest {
 
     }
 
+    class BooleanMember extends Member {
+        @InjectBundle
+        private boolean injectedVar = false;
+
+        public void setInjectedVar(boolean injectedVar) {
+            this.injectedVar = injectedVar;
+        }
+
+        public boolean getInjectedVar() {
+            return this.injectedVar;
+        }
+
+    }
+
     @Test
     public void testInjectStringIntoPublicMember() {
         Bundle bundle = new Bundle();
@@ -129,6 +143,20 @@ public class BundleInjectorTest {
         int expected = 12345;
         bundle.putInt("injectedVar", expected);
         IntegerMember test = new IntegerMember();
+        test.inject(bundle);
+        assertEquals(expected, test.getInjectedVar());
+    }
+
+    @Test
+    public void testInjectBoolean() {
+        Bundle bundle = new Bundle();
+        boolean expected = true;
+        bundle.putBoolean("injectedVar", expected);
+        BooleanMember test = new BooleanMember();
+        test.inject(bundle);
+        assertEquals(expected, test.getInjectedVar());
+        expected = false;
+        bundle.putBoolean("injectedVar", expected);
         test.inject(bundle);
         assertEquals(expected, test.getInjectedVar());
     }
