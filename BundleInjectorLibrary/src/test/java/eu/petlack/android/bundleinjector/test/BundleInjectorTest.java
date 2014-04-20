@@ -60,8 +60,6 @@ public class BundleInjectorTest {
     class PrimitiveMember extends Member {
 
         @InjectBundle
-        public int injectedVarInt = 0;
-        @InjectBundle
         public boolean injectedVarBoolean = false;
         @InjectBundle
         public boolean[] injectedVarBooleanArray = { false };
@@ -81,6 +79,10 @@ public class BundleInjectorTest {
         public float injectedVarFloat = 0f;
         @InjectBundle
         public float[] injectedVarFloatArray = { 0f };
+        @InjectBundle
+        public int injectedVarInt = 0;
+        @InjectBundle
+        public int[] injectedVarIntArray = { 0 };
 
     }
 
@@ -112,16 +114,6 @@ public class BundleInjectorTest {
         ProtectedMember<String> test = new ProtectedMember<String>();
         test.inject(bundle);
         assertEquals(expected, test.getInjectedVar());
-    }
-
-    @Test
-    public void testInjectInteger() {
-        Bundle bundle = new Bundle();
-        int expected = 12345;
-        bundle.putInt("injectedVarInt", expected);
-        PrimitiveMember test = new PrimitiveMember();
-        test.inject(bundle);
-        assertEquals(expected, test.injectedVarInt);
     }
 
     @Test
@@ -269,6 +261,38 @@ public class BundleInjectorTest {
         PrimitiveMember test = new PrimitiveMember();
         test.inject(bundle);
         assertEquals(expected, test.injectedVarFloatArray);
+    }
+
+    @Test
+    public void testInjectInt() {
+        Bundle bundle = new Bundle();
+        int expected = 12345;
+        bundle.putInt("injectedVarInt", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarInt);
+    }
+
+    @Test
+    public void testInjectIntArray() {
+        Bundle bundle = new Bundle();
+        int[] expected = { 31, 41 };
+        bundle.putIntArray("injectedVarIntArray", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarIntArray);
+    }
+
+    @Test
+    public void testInjectIntegerArrayList() {
+        Bundle bundle = new Bundle();
+        ArrayList<Integer> expected = new ArrayList<Integer>();
+        expected.add(31);
+        expected.add(41);
+        bundle.putIntegerArrayList("injectedVar", expected);
+        PublicMember<ArrayList<Integer>> test = new PublicMember<ArrayList<Integer>>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
     }
 
 }
