@@ -68,8 +68,8 @@
       <file leaf-file-name="BundleInjectorTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8518519" vertical-offset="2952" max-vertical-offset="3564">
-              <caret line="187" column="28" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.6666667" vertical-offset="3294" max-vertical-offset="3780">
+              <caret line="201" column="5" selection-start-line="201" selection-start-column="5" selection-end-line="201" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#509#510#0" expanded="true" />
@@ -82,10 +82,10 @@
                 <element signature="e#1181#1182#0" expanded="true" />
                 <element signature="e#1218#1219#0" expanded="true" />
                 <element signature="e#1265#1266#0" expanded="true" />
-                <element signature="e#2062#2070#0" expanded="true" />
-                <element signature="e#2411#2419#0" expanded="true" />
-                <element signature="e#2771#2779#0" expanded="true" />
-                <element signature="e#4640#4648#0" expanded="true" />
+                <element signature="e#2138#2146#0" expanded="true" />
+                <element signature="e#2487#2495#0" expanded="true" />
+                <element signature="e#2847#2855#0" expanded="true" />
+                <element signature="e#4716#4724#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1121,7 +1121,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-4" width="1233" height="1029" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1246,8 +1246,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8518519" vertical-offset="2952" max-vertical-offset="3564">
-          <caret line="187" column="28" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.6666667" vertical-offset="3294" max-vertical-offset="3780">
+          <caret line="201" column="5" selection-start-line="201" selection-start-column="5" selection-end-line="201" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#509#510#0" expanded="true" />
@@ -1260,10 +1260,10 @@
             <element signature="e#1181#1182#0" expanded="true" />
             <element signature="e#1218#1219#0" expanded="true" />
             <element signature="e#1265#1266#0" expanded="true" />
-            <element signature="e#2062#2070#0" expanded="true" />
-            <element signature="e#2411#2419#0" expanded="true" />
-            <element signature="e#2771#2779#0" expanded="true" />
-            <element signature="e#4640#4648#0" expanded="true" />
+            <element signature="e#2138#2146#0" expanded="true" />
+            <element signature="e#2487#2495#0" expanded="true" />
+            <element signature="e#2847#2855#0" expanded="true" />
+            <element signature="e#4716#4724#0" expanded="true" />
           </folding>
         </state>
       </provider>

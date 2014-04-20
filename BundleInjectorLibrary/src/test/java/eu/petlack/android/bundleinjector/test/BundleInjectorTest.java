@@ -71,6 +71,8 @@ public class BundleInjectorTest {
         public byte[] injectedVarByteArray = { 0 };
         @InjectBundle
         public char injectedVarChar = 'a';
+        @InjectBundle
+        public char[] injectedVarCharArray = { 'a' };
 
     }
 
@@ -187,6 +189,16 @@ public class BundleInjectorTest {
         PrimitiveMember test = new PrimitiveMember();
         test.inject(bundle);
         assertEquals(expected, test.injectedVarChar);
+    }
+
+    @Test
+    public void testInjectCharArray() {
+        Bundle bundle = new Bundle();
+        char[] expected = { 'X', 'Y' };
+        bundle.putCharArray("injectedVarCharArray", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarCharArray);
     }
 
 }
