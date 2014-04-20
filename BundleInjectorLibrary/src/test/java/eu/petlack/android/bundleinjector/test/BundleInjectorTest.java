@@ -142,4 +142,15 @@ public class BundleInjectorTest {
         assertEquals(expected, test.injectedVarBooleanArray);
     }
 
+    @Test
+    public void testInjectBundle() {
+        Bundle bundle = new Bundle();
+        Bundle expected = new Bundle();
+        expected.putString("test key", "test value");
+        bundle.putBundle("injectedVar", expected);
+        PublicMember<Bundle> test = new PublicMember<Bundle>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
+    }
+
 }
