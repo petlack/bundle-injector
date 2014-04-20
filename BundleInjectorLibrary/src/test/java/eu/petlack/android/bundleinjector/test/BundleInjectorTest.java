@@ -1,6 +1,7 @@
 package eu.petlack.android.bundleinjector.test;
 
 import android.os.Bundle;
+import android.os.Parcelable;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -317,6 +318,47 @@ public class BundleInjectorTest {
         PrimitiveMember test = new PrimitiveMember();
         test.inject(bundle);
         assertEquals(expected, test.injectedVarLongArray);
+    }
+
+    @Test
+    public void testInjectParcelable() {
+        Bundle bundle = new Bundle();
+        Parcelable expected = new Bundle();
+        ((Bundle) expected).putString("test key", "test value");
+        bundle.putParcelable("injectedVar", expected);
+        PublicMember<Parcelable> test = new PublicMember<Parcelable>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
+    }
+
+    @Test
+    public void testInjectParcelableArray() {
+        Bundle bundle = new Bundle();
+        Parcelable expected1 = new Bundle();
+        ((Bundle) expected1).putString("test key 1", "test value 1");
+        Parcelable expected2 = new Bundle();
+        ((Bundle) expected2).putString("test key 2", "test value 2");
+        Parcelable[] expected = { expected1, expected2 };
+        bundle.putParcelableArray("injectedVar", expected);
+        PublicMember<Parcelable> test = new PublicMember<Parcelable>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
+    }
+
+    @Test
+    public void testInjectParcelableArrayList() {
+        Bundle bundle = new Bundle();
+        Parcelable expected1 = new Bundle();
+        ((Bundle) expected1).putString("test key 1", "test value 1");
+        Parcelable expected2 = new Bundle();
+        ((Bundle) expected2).putString("test key 2", "test value 2");
+        ArrayList<Parcelable> expected = new ArrayList<Parcelable>();
+        expected.add(expected1);
+        expected.add(expected2);
+        bundle.putParcelableArrayList("injectedVar", expected);
+        PublicMember<ArrayList<Parcelable>> test = new PublicMember<ArrayList<Parcelable>>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar);
     }
 
 }
