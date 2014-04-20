@@ -89,6 +89,10 @@ public class BundleInjectorTest {
         public long injectedVarLong = 0;
         @InjectBundle
         public long[] injectedVarLongArray = { 0 };
+        @InjectBundle
+        public short injectedVarShort = 0;
+        @InjectBundle
+        public short[] injectedVarShortArray = { 0 };
 
     }
 
@@ -370,6 +374,26 @@ public class BundleInjectorTest {
         PublicMember<Serializable> test = new PublicMember<Serializable>();
         test.inject(bundle);
         assertEquals(expected, test.injectedVar);
+    }
+
+    @Test
+    public void testInjectShort() {
+        Bundle bundle = new Bundle();
+        short expected = 3141;
+        bundle.putShort("injectedVarShort", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarShort);
+    }
+
+    @Test
+    public void testInjectShortArray() {
+        Bundle bundle = new Bundle();
+        short[] expected = { 31, 41 };
+        bundle.putShortArray("injectedVarShortArray", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarShortArray);
     }
 
 }
