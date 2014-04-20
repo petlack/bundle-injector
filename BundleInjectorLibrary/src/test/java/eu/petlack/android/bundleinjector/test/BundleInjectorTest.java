@@ -65,6 +65,8 @@ public class BundleInjectorTest {
         public boolean injectedVarBoolean = false;
         @InjectBundle
         public boolean[] injectedVarBooleanArray = { false };
+        @InjectBundle
+        public byte injectedVarByte = 0;
 
     }
 
@@ -151,6 +153,16 @@ public class BundleInjectorTest {
         PublicMember<Bundle> test = new PublicMember<Bundle>();
         test.inject(bundle);
         assertEquals(expected, test.injectedVar);
+    }
+
+    @Test
+    public void testInjectByte() {
+        Bundle bundle = new Bundle();
+        byte expected = 123;
+        bundle.putByte("injectedVarByte", expected);
+        PrimitiveMember test = new PrimitiveMember();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVarByte);
     }
 
 }
