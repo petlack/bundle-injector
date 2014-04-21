@@ -7,6 +7,7 @@ import android.util.SparseArray;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.annotation.Config;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ import static junit.framework.Assert.*;
 /**
  * Created by petlack on 4/19/14.
  */
+@Config(manifest=Config.NONE)
 @RunWith(RobolectricTestRunner.class)
 public class BundleInjectorTest {
 
@@ -94,6 +96,15 @@ public class BundleInjectorTest {
         public short injectedVarShort = 0;
         @InjectBundle
         public short[] injectedVarShortArray = { 0 };
+
+    }
+
+    class WrongMember extends Member {
+
+        @InjectBundle
+        public String injectedVarString;
+        @InjectBundle
+        public Integer injectedVarInteger;
 
     }
 
@@ -433,6 +444,15 @@ public class BundleInjectorTest {
         PublicMember<ArrayList<String>> test = new PublicMember<ArrayList<String>>();
         test.inject(bundle);
         assertEquals(expected, test.injectedVar);
+    }
+
+    @Test
+    public void testWrongType() {
+        Bundle bundle = new Bundle();
+        bundle.putString("injectedVarInteger", "expected value");
+        WrongMember test = new WrongMember();
+        test.inject(bundle);
+        assertNull(test.injectedVarInteger);
     }
 
 }
