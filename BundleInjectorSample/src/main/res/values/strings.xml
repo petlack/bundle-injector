@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BundleInjector</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity_b">ActivityB</string>
+    <string name="passed_value">Passed value:</string>
+    <string name="returned_value">Returned value:</string>
+    <string name="enter_value_to_pass">Enter value to pass</string>
+    <string name="launch_b">Launch Activity B</string>
+    <string name="finish">Finish</string>
+
+</resources>
