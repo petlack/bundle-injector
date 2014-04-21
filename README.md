@@ -28,6 +28,8 @@ Setup
 
 Usage
 -----
+**IMPORTANT**: each injected variable must have exactly the same name in the Bundle
+
 Simple example showing data exchange between 2 activities:
 
 **ActivityA.java**
