@@ -1,1 +1,1 @@
-include ':BundleInjectorLibrary'
+include ':BundleInjectorLibrary', ':BundleInjectorSample'

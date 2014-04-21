@@ -41,7 +41,7 @@ public class ActivityA extends Activity {
         ...
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(ActvityA.this, ActivityB.class);
+                Intent intent = new Intent(ActivityA.this, ActivityB.class);
                 Bundle extras = new Bundle();
                 extras.putString("passedParam", "SAMPLE VALUE");
                 intent.putExtras(extras);
@@ -53,7 +53,7 @@ public class ActivityA extends Activity {
     
      public void onActivityResult(int reqCode, int resCode, Intent data) {
         ...
-        BundleInjector.inject(this, data);
+        BundleInjector.inject(this, data.getExtras());
         // now, returnedParam contains value from Activity B
         ...
      }
@@ -74,9 +74,11 @@ public class ActivityB extends Activity {
         ...
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                Intent result = new Intent();
                 Bundle extras = new Bundle();
                 extras.putString("returnedParam", "SAMPLE RETURNED VALUE");
-                setResult(RESULT_OK, extras);
+                result.putExtras(extras);
+                setResult(RESULT_OK, result);
                 finish();
             }
         });
