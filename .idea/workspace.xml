@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fdbe359-944a-4fdb-8d32-a2b42477e84a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BundleInjector.iws" />
@@ -109,15 +110,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BundleInjector.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BundleInjector.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BundleInjectorLibrary/src/main/java/eu/petlack/android/bundleinjector/BundleInjector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2862191" vertical-offset="324" max-vertical-offset="1512">
+            <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1512">
               <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#365#385#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.77720207" vertical-offset="0" max-vertical-offset="579">
+              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -855,6 +866,7 @@
         <option value="$USER_HOME$/Temp/Main.java" />
         <option value="$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java" />
         <option value="$PROJECT_DIR$/BundleInjectorLibrary/src/main/java/eu/petlack/android/bundleinjector/BundleInjector.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -1278,14 +1290,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BundleInjectorLibrary/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="579">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BundleInjectorLibrary/src/main/java/eu/petlack/android/bundleinjector/BundleInjector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2862191" vertical-offset="324" max-vertical-offset="1512">
+        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1512">
           <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#365#385#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77720207" vertical-offset="0" max-vertical-offset="579">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
