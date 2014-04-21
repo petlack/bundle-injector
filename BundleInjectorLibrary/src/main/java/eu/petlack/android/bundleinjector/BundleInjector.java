@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.util.Log;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.ParameterizedType;
 import java.util.HashMap;
 
 /**
@@ -26,6 +25,11 @@ public class BundleInjector {
         primitiveRefMapping.put(short.class, Short.class);
     }
 
+    /**
+     * Inject object's fields with so named parameters from bundle
+     * @param o object to inject (i.e. Activity)
+     * @param bundle bundle with parameters named same as object's fields
+     */
     public static void inject(Object o, Bundle bundle) {
         if (bundle == null) {
             Log.e(TAG, "Failed to inject from null bundle");
