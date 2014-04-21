@@ -16,6 +16,7 @@ import eu.petlack.android.bundleinjector.BundleInjector;
 import eu.petlack.android.bundleinjector.InjectBundle;
 
 import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertEquals;
 
 /**
  * Created by petlack on 4/19/14.
@@ -462,6 +463,16 @@ public class BundleInjectorTest {
         PublicMember<String> test = new PublicMember<String>();
         test.inject(bundle);
         assertNull(test.injectedVar);
+    }
+
+    @Test
+    public void testPrimitiveAndRef() {
+        Bundle bundle = new Bundle();
+        int expected = 1234;
+        bundle.putInt("injectedVar", expected);
+        PublicMember<Integer> test = new PublicMember<Integer>();
+        test.inject(bundle);
+        assertEquals(expected, test.injectedVar.intValue());
     }
 
 }
