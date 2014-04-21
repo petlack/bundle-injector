@@ -455,4 +455,13 @@ public class BundleInjectorTest {
         assertNull(test.injectedVarInteger);
     }
 
+    @Test
+    public void testWhenNotPresent() {
+        Bundle bundle = new Bundle();
+        bundle.putString("injectedVarNonExisting", "expected value");
+        PublicMember<String> test = new PublicMember<String>();
+        test.inject(bundle);
+        assertNull(test.injectedVar);
+    }
+
 }

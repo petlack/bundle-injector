@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fdbe359-944a-4fdb-8d32-a2b42477e84a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java" afterPath="$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BundleInjector.iws" />
@@ -69,8 +68,8 @@
       <file leaf-file-name="BundleInjectorTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78238344" vertical-offset="7773" max-vertical-offset="8352">
-              <caret line="457" column="0" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9067358" vertical-offset="7809" max-vertical-offset="8514">
+              <caret line="463" column="35" selection-start-line="463" selection-start-column="35" selection-end-line="463" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#702#703#0" expanded="true" />
@@ -103,6 +102,7 @@
                 <element signature="e#14435#14445#0" expanded="true" />
                 <element signature="e#14679#14687#0" expanded="true" />
                 <element signature="e#14868#14887#0" expanded="true" />
+                <element signature="e#15461#15469#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1168,13 +1168,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-4" width="1233" height="1029" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30558723" sideWeight="0.49957806" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30558723" sideWeight="0.49957806" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295325" sideWeight="0.49957806" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37742302" sideWeight="0.50042194" order="7" side_tool="true" content_ui="tabs" />
@@ -1248,8 +1248,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BundleInjectorLibrary/src/test/java/eu/petlack/android/bundleinjector/test/BundleInjectorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78238344" vertical-offset="7773" max-vertical-offset="8352">
-          <caret line="457" column="0" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9067358" vertical-offset="7809" max-vertical-offset="8514">
+          <caret line="463" column="35" selection-start-line="463" selection-start-column="35" selection-end-line="463" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#702#703#0" expanded="true" />
@@ -1282,6 +1282,7 @@
             <element signature="e#14435#14445#0" expanded="true" />
             <element signature="e#14679#14687#0" expanded="true" />
             <element signature="e#14868#14887#0" expanded="true" />
+            <element signature="e#15461#15469#0" expanded="true" />
           </folding>
         </state>
       </provider>
