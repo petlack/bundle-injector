@@ -22,9 +22,9 @@ public class YourActivity extends Activity {
 
 Setup
 -----
-**Eclipse**: 
+**Eclipse**: In Eclipse, import the BundleInjectorLibrary as Android library project. If needed, fix build path, so `src/main/java` is the source folder. Finally, add dependency to the project via project settings.
 
-**Android Studio**:
+**Android Studio**: In Android Studio, import the BundleInejctorLibrary module via **File -> Import module**. If you don't have dependency `classpath 'com.squareup.gradle:gradle-android-test-plugin:0.9.1-SNAPSHOT'`in your main build.gradle, add it there, or remove `apply plugin: 'android-test'` and `testCompile`, `androidTestCompile` dependencies  from build.gradle in BundleInjectorLibrary
 
 Usage
 -----
